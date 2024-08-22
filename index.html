@@ -17,9 +17,10 @@
         <!-- main content container -->
         <div class="flex flex-col md:flex-row">
             <!-- shape card container -->
-            <div class="flex-1 grid grid-cols-1  md:grid-cols-2  lg:grid-cols-3">
+            <div class="flex-1 grid grid-cols-1  md:grid-cols-1  lg:grid-cols-3 gap-10">
+
                 <!-- triangle card -->
-                <div class="card bg-base-100 w-96 shadow-xl">
+                <div class=" pt-5 card bg-base-100 w-96 shadow-xl bg-red-100">
                     <figure>
                         <img src="geometry-genius-resources-main/images/triangle.png" alt="Shoes" />
                     </figure>
@@ -43,8 +44,9 @@
                         </div>
                     </div>
                 </div>
+
                 <!-- Rectangle card -->
-                <div class="card bg-base-100 w-96 shadow-xl">
+                <div class="pt-5 bg-red-100 card bg-base-100 w-96 shadow-xl">
                     <figure>
                         <img src="geometry-genius-resources-main/images/rectangle.png" alt="Shoes" />
                     </figure>
@@ -59,11 +61,36 @@
                             <input class="w-24 text-2xl p-2 rounded-sm" type="text" name="" placeholder="Width"
                                 id="rectangle-width"> <span class="mr-4 ml-2">cm</span>
                         </div>
-                        <div>
-                            <p class="text-2xl">Area: <span id="rectangle-area"></span><span>cm<sup>2</sup></span></p>
+                        <div class="border p-1 mb-2">
+                            <p class="text-2xl">Area: <span id="rectangle-area"></span><span> cm<sup>2</sup></span></p>
                         </div>
                         <div class="card-actions justify-end">
                             <button onclick='calculateRectangleArea()' class="btn btn-primary w-full">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- my parallelogram -->
+                <div class="pt-5 bg-red-100 card bg-base-100 w-96 shadow-xl">
+                    <figure>
+                        <img src="geometry-genius-resources-main/images/parallelogram.png" alt="Shoes" />
+                    </figure>
+                    <div class="card-body">
+                        <h2 class="card-title">Parallelogram</h2>
+                        <p>Area = b X h</p>
+                        <div class="flex items-center">
+                            <input id="paraBase" class="w-24 text-2xl p-2 rounded-sm" type="text"
+                                placeholder="Base"><span class="mr-4 ml-2"> cm</span>
+                            <input id="paraHeight" id="paraHeight" class="w-24 text-2xl p-2 rounded-sm" type="text"
+                                placeholder="Height"><span class="mr-4 ml-2">
+                                cm</span>
+                        </div>
+                        <div class="border p-1 mb-2">
+                            <p class="text-2xl">Area: <span id="parallelogramArea"> </span><span> cm<sup>2</sup></span>
+                            </p>
+                        </div>
+                        <div class="card-actions justify-end">
+                            <button onclick="parallelogram()" class="btn btn-primary w-full">Calculate</button>
                         </div>
                     </div>
                 </div>
@@ -78,12 +105,9 @@
 
 
 
-
-
-
             </div>
             <!-- area calculation container -->
-            <div class="w-96 border-2 border-gray-700 rounded-md">
+            <div class="mt-10 w-96 border-2 border-gray-700 rounded-md">
                 <h3 class="text--3xl text-center p-4">Area Calculation</h3>
             </div>
         </div>
@@ -91,8 +115,10 @@
 
 
 
+    <script src="script/parallelogram.js"></script>
     <script src="script/triangle-calculate.js"></script>
     <script src="script/rectangle-calculate.js"></script>
+
 </body>
 
 </html>
