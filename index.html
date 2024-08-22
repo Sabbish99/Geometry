@@ -15,9 +15,9 @@
     </header>
     <main>
         <!-- main content container -->
-        <div class="flex flex-col md:flex-row">
+        <div class="flex flex-col md:flex-row lg:flex-row ">
             <!-- shape card container -->
-            <div class="flex-1 grid grid-cols-1  md:grid-cols-1  lg:grid-cols-3 gap-10">
+            <div class="flex-1  grid grid-cols-1  md:grid-cols-1  lg:grid-cols-3 gap-10">
 
                 <!-- triangle card -->
                 <div class=" pt-5 card bg-base-100 w-96 shadow-xl bg-red-100">
@@ -95,21 +95,32 @@
                     </div>
                 </div>
 
-
-
-
-
-
-
-
-
-
+                <!-- Rhombus -->
+                <div class="bg-red-200  pt-5 card bg-base-100 w-96 shadow-xl">
+                    <figure>
+                        <img src="geometry-genius-resources-main/images/rhombus.png" alt="Shoes" />
+                    </figure>
+                    <div class="card-body">
+                        <h2 class="card-title">Rhombus</h2>
+                        <p>Area = 0.5 X d<sub>1</sub> X d<sub>2</sub></p>
+                        <div class="flex items-center">
+                            <input id="d1Input" class="w-24 text-2xl p-1 rounded-sm" type="text" placeholder="d1"><span
+                                class="mr-4 ml-2">cm</span>
+                            <input id="d2Input" class="w-24 text-2xl p-1 rounded-sm" type="text" placeholder="d2"><span
+                                class="mr-4 ml-2">cm</span>
+                        </div>
+                        <div>
+                            <p>Area: <span id="rhombusArea"></span>
+                                cm<sup>2</sup></p>
+                        </div>
+                        <div class="card-actions justify-end">
+                            <button onclick="rhombus()" class="btn btn-primary w-full">Calculate</button>
+                        </div>
+                    </div>
+                </div>
 
             </div>
-            <!-- area calculation container -->
-            <div class="mt-10 w-96 border-2 border-gray-700 rounded-md">
-                <h3 class="text--3xl text-center p-4">Area Calculation</h3>
-            </div>
+
         </div>
     </main>
 
@@ -118,6 +129,7 @@
     <script src="script/parallelogram.js"></script>
     <script src="script/triangle-calculate.js"></script>
     <script src="script/rectangle-calculate.js"></script>
+    <script src="script/rhombus.js"></script>
 
 </body>
 
